@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ryand.doctorvisitdetails.EditorActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_mainHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:text="@string/Details_Of_Visit"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:height="220dp"
+                android:background="@drawable/edit_text_design"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/patientDetails"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TV_patientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/Name"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/patientName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/TV_patientAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/Age"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/patientAge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/TV_patientInsurance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/Insurance_Type"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/medicalCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Medical_Card" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TV_patientFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/Fee"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/patientFee"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+
+            <Button
+                android:id="@+id/buttonLoadPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:text="Load Picture"></Button>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:onClick="process"
+                android:text="Add image of symptoms" />
+
+            <!--<ImageView-->
+                <!--android:id="@+id/symptoms"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:contentDescription="symptoms"-->
+
+                <!--/>-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/horizontalScrollView">
+                <LinearLayout
+                    android:id="@+id/imageGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
+            </HorizontalScrollView>
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Last Modified"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/TV_lastUpdated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:inputType="date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/ryand/Desktop/Medical%20Memo%20Maker/app/src/main/res/layout/activity_editor.xml -->
